@@ -1,3 +1,4 @@
+/*
 //ingresar usuario
 
 let nombreUsuario = prompt("Ingresar nombre de usuario");
@@ -20,3 +21,45 @@ let precioDescuento = 60;
 let nuevoPrecio = resta(precioProducto,precioDescuento); 
 console.log (nuevoPrecio);
 
+*/
+
+// FUNCIONES 
+
+solicitarDatos();
+
+// SOLICITUD PRECIOS DE MACETAS Y PRODUCTOS A USUARIO
+
+function solicitarDatos (){
+    let num1 = Number (prompt ("Por favor, ingrese precio de su maceta o producto que quiere comprar"));
+    let num2 = Number (prompt ("Por favor, ingrese segundo precio de su maceta o producto que quiere comprar"));
+    let operador = prompt ("Por favor, para visualizar el monto final a abonar, ingrese el simbolo +");
+
+    calcular (num1, num2, operador);
+}
+
+// CALCULO
+function calcular (a,b,c) {
+
+    let res;
+
+    switch (c) {
+        case "+": res= a+b;
+        break;
+        case "-": res= a-b;
+        break;
+        case "*": res= a*b;
+        break;
+        case "/": res= a/b;
+        break;
+        default: res= "La operación es incorrecta";
+        break;
+    }
+    resultado(res);
+
+//RESULTADO
+    
+function resultado (a){
+    console.log (a)
+    alert (a);
+    }
+}
